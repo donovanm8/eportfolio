@@ -10,9 +10,7 @@ function moveBackground(event) {
   for (let i = 0; i < shapes.length; ++i) {
     const isOdd = i % 2 !== 0;
     const boolInt = isOdd ? -1 : 1;
-    shapes[i].style.transform = `translate(${x * boolInt}px, ${
-      y * boolInt
-    }px) rotate(${x * boolInt * 10}deg)`;
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt }px) rotate(${x * boolInt * 10}deg)`;
   }
 }
 
@@ -34,10 +32,10 @@ function contact(event) {
 
   emailjs
     .sendForm(
-      "service_56wiqal",
-      "template_4nofg39",
+      "service_gsxsl5u",
+      "template_1si1p4y",
       event.target,
-      "C0DmF2EILNSfuOV5b"
+      "xfiG7g_lLE9lP101Y"
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -46,7 +44,7 @@ function contact(event) {
     .catch((error) => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily down, please contact me directly at donovanlopez999@gmail.com"
+        "The email service is temporarily down, please contact me directly at donovanlopez9827@gmail.com"
       );
     });
 }
